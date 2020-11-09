@@ -12,60 +12,48 @@
         android:id="@+id/speedButton"
         android:layout_width="161dp"
         android:layout_height="191dp"
-        android:layout_below="@+id/lengthButton"
-        android:layout_alignEnd="@+id/lengthButton"
-        android:layout_alignRight="@+id/lengthButton"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/speed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/lengthButton"
         android:layout_width="161dp"
         android:layout_height="191dp"
-        android:layout_alignParentTop="true"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/length"
         app:layout_constraintBaseline_toBaselineOf="@+id/speedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/speedButton"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintStart_toEndOf="@+id/speedButton" />
 
     <Button
         android:id="@+id/volumeButton"
         android:layout_width="161dp"
         android:layout_height="191dp"
-        android:layout_below="@+id/speedButton"
-        android:layout_alignStart="@+id/speedButton"
-        android:layout_alignLeft="@+id/speedButton"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="150dp"
         android:background="@drawable/volume"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speedButton"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/temperatureButton"
         android:layout_width="161dp"
         android:layout_height="191dp"
-        android:layout_below="@+id/volumeButton"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/temp"
         app:layout_constraintBaseline_toBaselineOf="@+id/volumeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/volumeButton"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintStart_toEndOf="@+id/volumeButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
