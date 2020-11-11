@@ -123,47 +123,66 @@ public class calculator extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                try{
                 if (calculatorEditText == null) {
                     calculatorEditText.setText("");
-                } else {
+                }
+
+                else {
                     mValueOne = Float.parseFloat(calculatorEditText.getText() + "");
                     calculatorAddition = true;
                     calculatorEditText.setText(null);
                 }
+            }
+            catch (Exception e){
+                calculatorEditText.setText("NaN+");
+            }
             }
         });
 
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try{
                 mValueOne = Float.parseFloat(calculatorEditText.getText() + "");
                 mSubtract = true;
-                calculatorEditText.setText(null);
+                calculatorEditText.setText(null);}
+                catch (Exception e){
+                    calculatorEditText.setText("NaN-");
+                }
             }
         });
 
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try{
                 mValueOne = Float.parseFloat(calculatorEditText.getText() + "");
                 calculatorMultiplication = true;
-                calculatorEditText.setText(null);
+                calculatorEditText.setText(null);}
+                catch (Exception e){
+                    calculatorEditText.setText("NaN*");
+                }
             }
         });
 
         buttonDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try{
                 mValueOne = Float.parseFloat(calculatorEditText.getText() + "");
                 calculatorDivision = true;
-                calculatorEditText.setText(null);
+                calculatorEditText.setText(null);}
+                catch (Exception e){
+                    calculatorEditText.setText("NaN/");
+                }
             }
         });
 
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try{
                 mValueTwo = Float.parseFloat(calculatorEditText.getText() + "");
 
                 if (calculatorAddition == true) {
@@ -184,6 +203,15 @@ public class calculator extends AppCompatActivity {
                 if (calculatorDivision == true) {
                     calculatorEditText.setText(mValueOne / mValueTwo + "");
                     calculatorDivision = false;
+                }
+                else {
+                    try {
+                        mValueOne = Double.parseDouble(calculatorEditText.getText().toString());
+                    }
+                    catch (Exception e){}
+                }}
+                catch (Exception e){
+                    calculatorEditText.setText("NaN=");
                 }
             }
         });

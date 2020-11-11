@@ -15,7 +15,7 @@
         android:layout_centerInParent="false"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp"
-        android:text="Enter Length(In mm)"
+        android:text="Enter Length (in mm)"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -34,8 +34,8 @@
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="Choose Conversion Unit"
         android:alpha="1"
+        android:text="Choose conversion unit"
         android:textSize="30sp"
         android:textStyle="bold"
         tools:ignore="UnknownId" />
